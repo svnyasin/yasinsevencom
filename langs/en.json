@@ -1,0 +1,14 @@
+{
+    "aboutme": {
+        "navbar": "About Me",
+        "main": "About me page is under construction.."
+    },
+    "blog": {
+        "navbar": "Blog",
+        "main": "Blog page is under construction.."
+    },
+    "projects": {
+        "navbar": "Projects",
+        "main": "Projects page is under construction.."
+    }
+}

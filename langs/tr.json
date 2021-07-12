@@ -1,0 +1,14 @@
+{
+    "aboutme": {
+        "navbar": "Hakkımda",
+        "main": "Hakkımda sayfası yapım aşamasında.."
+    },
+    "blog": {
+        "navbar": "Blog",
+        "main": "Blog sayfası yapım aşamasında.."
+    },
+    "projects": {
+        "navbar": "Projelerim",
+        "main": "Projelerim sayfası yapım aşamasında.."
+    }
+}
