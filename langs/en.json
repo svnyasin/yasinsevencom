@@ -1,7 +1,8 @@
 {
     "aboutme": {
         "navbar": "About Me",
-        "main": "About me page is under construction.."
+        "head-main": "Hi! I'm Yasin Seven",
+        "main": "I've always been fascinated by computers and electronic devices, and I've always wondered what's going on in the background and how they work. That's why I'm trying to advance my career in the world of informatics. I am dealing with cyber security, coding and developing mobile applications with flutter."
     },
     "blog": {
         "navbar": "Blog",

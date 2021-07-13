@@ -17,7 +17,8 @@ class CodegenLoader extends AssetLoader{
   static const Map<String,dynamic> en = {
   "aboutme": {
     "navbar": "About Me",
-    "main": "About me page is under construction.."
+    "head-main": "Hi! I'm Yasin Seven",
+    "main": "I've always been fascinated by computers and electronic devices, and I've always wondered what's going on in the background and how they work. That's why I'm trying to advance my career in the world of informatics. I am dealing with cyber security, coding and developing mobile applications with flutter."
   },
   "blog": {
     "navbar": "Blog",
@@ -31,7 +32,8 @@ class CodegenLoader extends AssetLoader{
 static const Map<String,dynamic> tr = {
   "aboutme": {
     "navbar": "Hakkımda",
-    "main": "Hakkımda sayfası yapım aşamasında.."
+    "head-main": "Selam! Ben Yasin Seven",
+    "main": "Kendimi bildim bileli bilgisayarlar ve elektronik aletlere hep bir hayranlık duyar arka planda neler olduğunu ve nasıl çalıştıklarını merak ederim. Bu nedenle kariyerimi bilişim dünyasında ilerletmeye karar verdim. Siber güvenlik, yazılım ile ilgileniyor ve flutter ile mobil uygulamalar geliştiriyorum."
   },
   "blog": {
     "navbar": "Blog",

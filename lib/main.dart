@@ -1,9 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:yasinsevencom/langs/codegen_loader.g.dart';
-//import 'package:yasinsevencom/langs/locale_keys.g.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:yasinsevencom/pages/aboutme.dart';
+import 'package:yasinsevencom/pages/aboutme/aboutme.dart';
 import 'package:yasinsevencom/pages/blog.dart';
 import 'package:yasinsevencom/pages/projects.dart';
 
@@ -97,10 +95,16 @@ class _MyAppState extends State<MyApp> {
           actions: <Widget>[
             IconButton(
               icon: _isTR
-                  ? SvgPicture.asset('icons/flags/svg/tr.svg',
-                      package: 'country_icons')
-                  : SvgPicture.asset('icons/flags/svg/gb.svg',
-                      package: 'country_icons'),
+                  ? Image.asset(
+                      'icons/tr-flag.png',
+                      height: 20,
+                      width: 20,
+                    )
+                  : Image.asset(
+                      'icons/uk-flag.png',
+                      height: 20,
+                      width: 20,
+                    ),
               onPressed: () {
                 if (context.locale.toString() == "tr") {
                   context.setLocale(Locale("en"));
