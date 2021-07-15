@@ -22,7 +22,7 @@ class AboutMeDesktop extends StatelessWidget {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/pp.jpg"),
+                  image: AssetImage("images/site_background_desktop.png"),
                   fit: BoxFit.cover,
                 ),
               ),

@@ -22,7 +22,7 @@ class AboutMeMobile extends StatelessWidget {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("images/pp.jpg"),
+                  image: AssetImage("images/site_background.png"),
                   fit: BoxFit.cover,
                 ),
               ),
@@ -76,7 +76,7 @@ class AboutMeMobile extends StatelessWidget {
                             TypewriterAnimatedText(
                               'Öğrenci',
                               textStyle: const TextStyle(
-                                fontSize: 40.0,
+                                fontSize: 36.0,
                                 fontWeight: FontWeight.bold,
                               ),
                               speed: const Duration(milliseconds: 200),
@@ -86,7 +86,7 @@ class AboutMeMobile extends StatelessWidget {
                             TypewriterAnimatedText(
                               'Yazılım Uzmanı',
                               textStyle: TextStyle(
-                                fontSize: 40.0,
+                                fontSize: 36.0,
                                 fontWeight: FontWeight.bold,
                               ),
                               speed: const Duration(milliseconds: 200),
