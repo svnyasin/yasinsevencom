@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:yasinsevencom/langs/codegen_loader.g.dart';
 import 'package:yasinsevencom/pages/aboutme/aboutme.dart';
 import 'package:yasinsevencom/pages/blog.dart';
-import 'package:yasinsevencom/pages/projects.dart';
+import 'package:yasinsevencom/pages/projects/projects.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +21,7 @@ void main() async {
   );
 }
 
-bool _isDark = false;
+bool isDark = false;
 bool _isTR = true;
 
 /// This is the main application widget.
@@ -65,7 +65,7 @@ class _MyAppState extends State<MyApp> {
         brightness: Brightness.dark,
         /* dark theme settings */
       ),
-      themeMode: _isDark ? ThemeMode.dark : ThemeMode.light,
+      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
       /* ThemeMode.system to follow system theme, 
          ThemeMode.light for light theme, 
          ThemeMode.dark for dark theme
@@ -74,17 +74,17 @@ class _MyAppState extends State<MyApp> {
       title: MyApp._title,
       home: Scaffold(
         appBar: AppBar(
-          backgroundColor: _isDark ? Colors.black : Colors.white,
+          backgroundColor: isDark ? Colors.black : Colors.white,
           titleSpacing: 0,
           title: Text(
             'yasinseven.com',
             style: TextStyle(
-                color: _isDark ? Colors.white : Colors.black,
+                color: isDark ? Colors.white : Colors.black,
                 fontWeight: FontWeight.w500),
           ),
           leading: IconButton(
             onPressed: () {},
-            icon: _isDark
+            icon: isDark
                 ? Image.asset(
                     'icons/favicon.png',
                   )
@@ -124,11 +124,11 @@ class _MyAppState extends State<MyApp> {
             IconButton(
               icon: Icon(
                 Icons.brightness_6,
-                color: _isDark ? Colors.white : Colors.black,
+                color: isDark ? Colors.white : Colors.black,
               ),
               onPressed: () {
                 setState(() {
-                  _isDark = !_isDark;
+                  isDark = !isDark;
                 });
               },
             ),
@@ -153,7 +153,7 @@ class _MyAppState extends State<MyApp> {
             ),
           ],
           currentIndex: _selectedIndex,
-          selectedItemColor: _isDark ? Colors.white : Colors.black,
+          selectedItemColor: isDark ? Colors.white : Colors.black,
           onTap: _onItemTapped,
           showUnselectedLabels: false,
         ),

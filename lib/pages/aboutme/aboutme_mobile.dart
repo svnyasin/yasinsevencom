@@ -172,8 +172,8 @@ class AboutMeMobile extends StatelessWidget {
                             height: 20,
                             child: Image.asset("icons/github.png")),
                         label: Text('Github'),
-                        onPressed: () => html.window
-                            .open(Constants.PROFILE_GITHUB, 'github'),
+                        onPressed: () =>
+                            html.window.open(PROFILE_GITHUB, 'github'),
                       ),
                       FlatButton.icon(
                         icon: SizedBox(
@@ -181,8 +181,8 @@ class AboutMeMobile extends StatelessWidget {
                             height: 20,
                             child: Image.asset("icons/instagram.png")),
                         label: Text('Instagram'),
-                        onPressed: () => html.window
-                            .open(Constants.PROFILE_INSTAGRAM, 'instagram'),
+                        onPressed: () =>
+                            html.window.open(PROFILE_INSTAGRAM, 'instagram'),
                       ),
                       FlatButton.icon(
                         icon: SizedBox(
@@ -190,8 +190,8 @@ class AboutMeMobile extends StatelessWidget {
                             height: 20,
                             child: Image.asset("icons/linkedin.png")),
                         label: Text('Linkedin'),
-                        onPressed: () => html.window
-                            .open(Constants.PROFILE_LINKEDIN, 'linkedin'),
+                        onPressed: () =>
+                            html.window.open(PROFILE_LINKEDIN, 'linkedin'),
                       )
                     ],
                   ),

@@ -54,6 +54,8 @@ flutter:
   assets:
   - icons/
   - images/
+  - images/projects/
+
 
   # flutter pub run easy_localization:generate -S "langs" -O "lib/langs" -o "locale_keys.g.dart" -f keys
   - langs/

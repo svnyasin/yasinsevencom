@@ -35,19 +35,12 @@ class AboutMeDesktop extends StatelessWidget {
                       SizedBox(
                         height: 10,
                       ),
-                      Text(
-                        "Yapım Aşamasında / Under Construction",
-                        style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
-                      ),
                     ],
                   ),
                   Container(
                     //color: Colors.blue,
                     height: 100,
-                    width: (MediaQuery.of(context).size.width * 0.9),
+                    width: (MediaQuery.of(context).size.width * 0.7),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -66,7 +59,7 @@ class AboutMeDesktop extends StatelessWidget {
                             ),
                             Text(
                               "  " + "aboutme.head-main".tr(),
-                              textScaleFactor: 1.5,
+                              textScaleFactor: 2,
                               style: TextStyle(fontWeight: FontWeight.bold),
                             ),
                           ],
@@ -76,7 +69,7 @@ class AboutMeDesktop extends StatelessWidget {
                             TypewriterAnimatedText(
                               'Öğrenci',
                               textStyle: const TextStyle(
-                                fontSize: 40.0,
+                                fontSize: 45.0,
                                 fontWeight: FontWeight.bold,
                               ),
                               speed: const Duration(milliseconds: 200),
@@ -119,7 +112,7 @@ class AboutMeDesktop extends StatelessWidget {
               ),
             ),
             Container(
-              width: (MediaQuery.of(context).size.width * 0.9),
+              width: (MediaQuery.of(context).size.width * 0.6),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -172,8 +165,8 @@ class AboutMeDesktop extends StatelessWidget {
                             height: 20,
                             child: Image.asset("icons/github.png")),
                         label: Text('Github'),
-                        onPressed: () => html.window
-                            .open(Constants.PROFILE_GITHUB, 'github'),
+                        onPressed: () =>
+                            html.window.open(PROFILE_GITHUB, 'github'),
                       ),
                       FlatButton.icon(
                         icon: SizedBox(
@@ -181,8 +174,8 @@ class AboutMeDesktop extends StatelessWidget {
                             height: 20,
                             child: Image.asset("icons/instagram.png")),
                         label: Text('Instagram'),
-                        onPressed: () => html.window
-                            .open(Constants.PROFILE_INSTAGRAM, 'instagram'),
+                        onPressed: () =>
+                            html.window.open(PROFILE_INSTAGRAM, 'instagram'),
                       ),
                       FlatButton.icon(
                         icon: SizedBox(
@@ -190,8 +183,8 @@ class AboutMeDesktop extends StatelessWidget {
                             height: 20,
                             child: Image.asset("icons/linkedin.png")),
                         label: Text('Linkedin'),
-                        onPressed: () => html.window
-                            .open(Constants.PROFILE_LINKEDIN, 'linkedin'),
+                        onPressed: () =>
+                            html.window.open(PROFILE_LINKEDIN, 'linkedin'),
                       )
                     ],
                   ),
