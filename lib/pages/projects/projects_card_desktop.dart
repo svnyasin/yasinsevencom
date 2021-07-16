@@ -5,9 +5,9 @@ import 'dart:html' as html;
 
 import '../../../../constants.dart';
 
-class RecentWorkCard extends StatefulWidget {
+class RecentWorkCardDesktop extends StatefulWidget {
   // just press "Command + ."
-  const RecentWorkCard({
+  const RecentWorkCardDesktop({
     Key? key,
     this.index,
     this.press,
@@ -17,10 +17,10 @@ class RecentWorkCard extends StatefulWidget {
   final Function()? press;
 
   @override
-  _RecentWorkCardState createState() => _RecentWorkCardState();
+  _RecentWorkCardDesktopState createState() => _RecentWorkCardDesktopState();
 }
 
-class _RecentWorkCardState extends State<RecentWorkCard> {
+class _RecentWorkCardDesktopState extends State<RecentWorkCardDesktop> {
   bool isHover = true;
   @override
   Widget build(BuildContext context) {
