@@ -36,6 +36,9 @@ class BlogMobile extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 60,
+              ),
             ],
           ),
         ),

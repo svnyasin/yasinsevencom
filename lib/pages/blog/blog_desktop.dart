@@ -48,6 +48,9 @@ class BlogDesktop extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 60,
+              ),
             ],
           ),
         ),

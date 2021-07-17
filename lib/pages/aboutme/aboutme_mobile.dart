@@ -17,7 +17,7 @@ class AboutMeMobile extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: (MediaQuery.of(context).size.height - 112),
+              height: (MediaQuery.of(context).size.height - 105),
               width: (MediaQuery.of(context).size.width),
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -34,13 +34,6 @@ class AboutMeMobile extends StatelessWidget {
                     children: [
                       SizedBox(
                         height: 10,
-                      ),
-                      Text(
-                        "Yapım Aşamasında / Under Construction",
-                        style: TextStyle(
-                            color: Colors.red,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 20),
                       ),
                     ],
                   ),
@@ -162,9 +155,8 @@ class AboutMeMobile extends StatelessWidget {
                   SizedBox(
                     height: 30,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
+                  Wrap(
+                    alignment: WrapAlignment.center,
                     children: <Widget>[
                       FlatButton.icon(
                         icon: SizedBox(
@@ -196,7 +188,7 @@ class AboutMeMobile extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 60,
                   ),
                 ],
               ),

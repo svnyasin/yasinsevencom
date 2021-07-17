@@ -36,6 +36,9 @@ class ProjectsMobile extends StatelessWidget {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 60,
+              ),
             ],
           ),
         ),

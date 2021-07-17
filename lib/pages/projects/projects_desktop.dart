@@ -5,6 +5,8 @@ import 'package:yasinsevencom/constants.dart';
 import 'package:yasinsevencom/models/projects.dart';
 import 'package:yasinsevencom/pages/projects/projects_card_desktop.dart';
 
+import 'dart:html' as html;
+
 class ProjectsDesktop extends StatelessWidget {
   const ProjectsDesktop({Key? key}) : super(key: key);
 
@@ -31,10 +33,16 @@ class ProjectsDesktop extends StatelessWidget {
                   children: List.generate(
                     projects.length,
                     (index) => ProjectsCardDesktop(
+                      press: () {
+                        html.window.open(projects[index].url!, 'project_url');
+                      },
                       index: index,
                     ),
                   ),
                 ),
+              ),
+              SizedBox(
+                height: 60,
               ),
             ],
           ),

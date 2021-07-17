@@ -17,7 +17,7 @@ class AboutMeDesktop extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: (MediaQuery.of(context).size.height - 112),
+              height: (MediaQuery.of(context).size.height - 105),
               width: (MediaQuery.of(context).size.width),
               alignment: Alignment.center,
               decoration: BoxDecoration(
@@ -189,7 +189,7 @@ class AboutMeDesktop extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 20,
+                    height: 60,
                   ),
                 ],
               ),
