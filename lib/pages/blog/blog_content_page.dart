@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
-import 'package:yasinsevencom/constants.dart';
-import 'dart:html' as html;
-import 'package:responsive_builder/responsive_builder.dart';
 import 'package:yasinsevencom/main.dart';
-import 'package:yasinsevencom/pages/aboutme/aboutme_desktop.dart';
-import 'package:yasinsevencom/pages/aboutme/aboutme_mobile.dart';
+import 'package:yasinsevencom/models/blog.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:yasinsevencom/pages/blog/blog.dart';
 
-class AboutMePage extends StatefulWidget {
-  const AboutMePage({Key? key}) : super(key: key);
+class BlogContentPage extends StatefulWidget {
+  const BlogContentPage({
+    Key? key,
+    this.index,
+  }) : super(key: key);
+
+  final int? index;
 
   @override
-  _AboutMePageState createState() => _AboutMePageState();
+  _BlogContentPageState createState() => _BlogContentPageState();
 }
 
-class _AboutMePageState extends State<AboutMePage> {
+class _BlogContentPageState extends State<BlogContentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,14 +30,13 @@ class _AboutMePageState extends State<AboutMePage> {
               fontWeight: FontWeight.w500),
         ),
         leading: IconButton(
-          onPressed: () {},
-          icon: isDark
-              ? Image.asset(
-                  'icons/favicon.png',
-                )
-              : Image.asset(
-                  'icons/favicon-black.png',
-                ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+          icon: (Icon(
+            Icons.arrow_back_ios,
+            color: isDark ? Colors.white : Colors.black,
+          )),
         ),
         actions: <Widget>[
           IconButton(
@@ -79,9 +80,8 @@ class _AboutMePageState extends State<AboutMePage> {
           ),
         ],
       ),
-      body: ScreenTypeLayout(
-        mobile: AboutMeMobile(),
-        desktop: AboutMeDesktop(),
+      body: Center(
+        child: Text(blogContents[widget.index!].content!),
       ),
     );
   }

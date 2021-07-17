@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:easy_localization/easy_localization.dart';
-import 'package:yasinsevencom/constants.dart';
-import 'dart:html' as html;
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:yasinsevencom/main.dart';
-import 'package:yasinsevencom/pages/aboutme/aboutme_desktop.dart';
-import 'package:yasinsevencom/pages/aboutme/aboutme_mobile.dart';
 
-class AboutMePage extends StatefulWidget {
-  const AboutMePage({Key? key}) : super(key: key);
+import 'package:easy_localization/easy_localization.dart';
+
+import 'blog_desktop.dart';
+import 'blog_mobile.dart';
+
+class BlogPage extends StatefulWidget {
+  const BlogPage({Key? key}) : super(key: key);
 
   @override
-  _AboutMePageState createState() => _AboutMePageState();
+  _BlogPageState createState() => _BlogPageState();
 }
 
-class _AboutMePageState extends State<AboutMePage> {
+class _BlogPageState extends State<BlogPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -80,8 +80,8 @@ class _AboutMePageState extends State<AboutMePage> {
         ],
       ),
       body: ScreenTypeLayout(
-        mobile: AboutMeMobile(),
-        desktop: AboutMeDesktop(),
+        mobile: BlogMobile(),
+        desktop: BlogDesktop(),
       ),
     );
   }

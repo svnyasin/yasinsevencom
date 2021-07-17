@@ -29,8 +29,8 @@ class ProjectsDesktop extends StatelessWidget {
                   spacing: kDefaultPadding,
                   runSpacing: kDefaultPadding * 2,
                   children: List.generate(
-                    recentWorks.length,
-                    (index) => RecentWorkCardDesktop(
+                    projects.length,
+                    (index) => ProjectsCardDesktop(
                       index: index,
                     ),
                   ),

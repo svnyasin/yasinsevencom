@@ -1,13 +1,13 @@
-class RecentWork {
+class Project {
   final String? image, title, description, url;
   final int? id;
 
-  RecentWork({this.id, this.image, this.title, this.description, this.url});
+  Project({this.id, this.image, this.title, this.description, this.url});
 }
 
 // Demo List of my works
-List<RecentWork> recentWorks = [
-  RecentWork(
+List<Project> projects = [
+  Project(
     id: 1,
     description:
         "Bilişim Sistemleri Analizi ve Tasarımı dersi kapsamında 2 arkadaşımla beraber geliştirmiş olduğum bulut tabanlı kargo takip sistemidir.",
@@ -15,7 +15,7 @@ List<RecentWork> recentWorks = [
     image: "images/projects/project_1.jpg",
     url: "https://github.com/svnyasin/cargopath",
   ),
-  RecentWork(
+  Project(
     id: 2,
     description:
         "Sunucu Tabanlı Programlama, Karar Destek Sistemleri ve Mekansal VeriTabanı dersleri kapsamında PHP ve MySQL kullanarak tasarlayıp geliştirmiş olduğum web tabanlı karar destek sistemi.",
@@ -24,7 +24,7 @@ List<RecentWork> recentWorks = [
     url:
         "https://github.com/svnyasin/Siber-Guvenlik-Yonetimi-Karar-Destek-Sistemi",
   ),
-  RecentWork(
+  Project(
     id: 3,
     description:
         "Python ile yazdığım girilen IPv4 adresinin yaklaşık konumunu tespit eden küçük bir program. ",
@@ -32,7 +32,7 @@ List<RecentWork> recentWorks = [
     image: "images/projects/project_3.jpg",
     url: "https://github.com/svnyasin/basicGeoIP",
   ),
-  RecentWork(
+  Project(
     id: 4,
     description:
         "Ufak bir 'linear regression' denemesi. Bu program internet üzerinde gerçek zamanlı verileri çekip bir veritabanına kaydederek oluşan bu veriseti üzerinden tahminleme yapmakta.",
@@ -40,7 +40,7 @@ List<RecentWork> recentWorks = [
     image: "images/projects/project_4.jpg",
     url: "https://github.com/svnyasin/alSatRobotu",
   ),
-  RecentWork(
+  Project(
     id: 5,
     description:
         "Hobi olarak 'Sonsuz zıplama' tarzında Unity kullanarak geliştirdiğim oyun.",
@@ -49,7 +49,7 @@ List<RecentWork> recentWorks = [
     url:
         "https://play.google.com/store/apps/details?id=com.sevenmoon.tumbleup&hl=tr",
   ),
-  RecentWork(
+  Project(
     id: 6,
     description:
         "Bu proje çalışmasında Raspberry Pi 3B ve diğer gerekli malzemeler kullanılarak görme engelli bireyler için yardımcı bir gözlük tasarlanması amaçlandı.",

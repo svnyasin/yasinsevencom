@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:yasinsevencom/main.dart';
-import 'package:yasinsevencom/models/projects.dart';
+import 'package:yasinsevencom/models/blog.dart';
 import 'dart:html' as html;
 
 import '../../../../constants.dart';
+import 'blog_content_page.dart';
 
-class ProjectsCardDesktop extends StatefulWidget {
+class BlogCardDesktop extends StatefulWidget {
   // just press "Command + ."
-  const ProjectsCardDesktop({
+  const BlogCardDesktop({
     Key? key,
     this.index,
     this.press,
@@ -17,11 +18,11 @@ class ProjectsCardDesktop extends StatefulWidget {
   final Function()? press;
 
   @override
-  _ProjectsCardDesktopState createState() => _ProjectsCardDesktopState();
+  _BlogCardDesktopState createState() => _BlogCardDesktopState();
 }
 
-class _ProjectsCardDesktopState extends State<ProjectsCardDesktop> {
-  bool isHover = true;
+class _BlogCardDesktopState extends State<BlogCardDesktop> {
+  bool isHover = false;
   @override
   Widget build(BuildContext context) {
     return InkWell(
@@ -36,14 +37,14 @@ class _ProjectsCardDesktopState extends State<ProjectsCardDesktop> {
         height: 320,
         width: 540,
         decoration: BoxDecoration(
-          color: isDark ? Colors.grey[900] : Colors.white,
+          color: isDark ? Colors.grey[900] : Colors.grey[200],
           borderRadius: BorderRadius.circular(10),
           boxShadow: [if (isHover) kDefaultCardShadow],
         ),
         child: Row(
           children: [
             Image.asset(
-              projects[widget.index!].image!,
+              blogContents[widget.index!].image!,
               height: 320,
               width: 255,
               fit: BoxFit.fitHeight,
@@ -56,7 +57,7 @@ class _ProjectsCardDesktopState extends State<ProjectsCardDesktop> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      projects[widget.index!].title!.toUpperCase(),
+                      blogContents[widget.index!].title!.toUpperCase(),
                       style: Theme.of(context)
                           .textTheme
                           .headline5!
@@ -64,15 +65,23 @@ class _ProjectsCardDesktopState extends State<ProjectsCardDesktop> {
                     ),
                     SizedBox(height: kDefaultPadding / 2),
                     SingleChildScrollView(
-                      child: Text(projects[widget.index!].description!,
+                      child: Text(blogContents[widget.index!].description!,
                           style: TextStyle(fontSize: 16)),
                     ),
                     SizedBox(height: kDefaultPadding),
                     TextButton(
-                        onPressed: () => html.window
-                            .open(projects[widget.index!].url!, 'project_url'),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => BlogContentPage(
+                                index: widget.index,
+                              ),
+                            ),
+                          );
+                        },
                         child: Text(
-                          "View More..",
+                          "Read More..",
                           style:
                               TextStyle(decoration: TextDecoration.underline),
                         ))

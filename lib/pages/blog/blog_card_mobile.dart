@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:yasinsevencom/main.dart';
-import 'package:yasinsevencom/models/projects.dart';
+import 'package:yasinsevencom/models/blog.dart';
 import 'dart:html' as html;
 
 import '../../../../constants.dart';
+import 'blog_content_page.dart';
 
-class ProjectsCardMobile extends StatefulWidget {
+class BlogCardMobile extends StatefulWidget {
   // just press "Command + ."
-  const ProjectsCardMobile({
+  const BlogCardMobile({
     Key? key,
     this.index,
     this.press,
@@ -17,10 +18,10 @@ class ProjectsCardMobile extends StatefulWidget {
   final Function()? press;
 
   @override
-  _ProjectsCardMobileState createState() => _ProjectsCardMobileState();
+  _BlogCardMobileState createState() => _BlogCardMobileState();
 }
 
-class _ProjectsCardMobileState extends State<ProjectsCardMobile> {
+class _BlogCardMobileState extends State<BlogCardMobile> {
   bool isHover = true;
   @override
   Widget build(BuildContext context) {
@@ -47,24 +48,32 @@ class _ProjectsCardMobileState extends State<ProjectsCardMobile> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Image.asset(
-                projects[widget.index!].image!,
+                blogContents[widget.index!].image!,
                 height: 250,
                 width: 320,
               ),
               Text(
-                projects[widget.index!].title!.toUpperCase(),
+                blogContents[widget.index!].title!.toUpperCase(),
                 style: Theme.of(context)
                     .textTheme
                     .headline5!
                     .copyWith(height: 1.5),
               ),
-              Text(projects[widget.index!].description!,
+              Text(blogContents[widget.index!].description!,
                   style: TextStyle(fontSize: 16)),
               TextButton(
-                onPressed: () => html.window
-                    .open(projects[widget.index!].url!, 'project_url'),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => BlogContentPage(
+                        index: widget.index,
+                      ),
+                    ),
+                  );
+                },
                 child: Text(
-                  "View More..",
+                  "Read More..",
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
               ),

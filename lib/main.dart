@@ -2,8 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:yasinsevencom/langs/codegen_loader.g.dart';
 import 'package:yasinsevencom/pages/aboutme/aboutme.dart';
-import 'package:yasinsevencom/pages/blog.dart';
+import 'package:yasinsevencom/pages/blog/blog.dart';
 import 'package:yasinsevencom/pages/projects/projects.dart';
+import 'package:flutter/cupertino.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,7 +23,7 @@ void main() async {
 }
 
 bool isDark = false;
-bool _isTR = true;
+bool isTR = true;
 
 /// This is the main application widget.
 class MyApp extends StatefulWidget {
@@ -72,92 +73,61 @@ class _MyAppState extends State<MyApp> {
       */
       debugShowCheckedModeBanner: false,
       title: MyApp._title,
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: isDark ? Colors.black : Colors.white,
-          titleSpacing: 0,
-          title: Text(
-            'yasinseven.com',
-            style: TextStyle(
-                color: isDark ? Colors.white : Colors.black,
-                fontWeight: FontWeight.w500),
+      home: CupertinoStoreHomePage(),
+    );
+  }
+}
+
+class CupertinoStoreHomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return CupertinoTabScaffold(
+      tabBar: CupertinoTabBar(
+        items: <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.account_circle),
+            label: 'aboutme.navbar'.tr(),
           ),
-          leading: IconButton(
-            onPressed: () {},
-            icon: isDark
-                ? Image.asset(
-                    'icons/favicon.png',
-                  )
-                : Image.asset(
-                    'icons/favicon-black.png',
-                  ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'blog.navbar'.tr(),
           ),
-          actions: <Widget>[
-            IconButton(
-              icon: _isTR
-                  ? Image.asset(
-                      'icons/tr-flag.png',
-                      height: 20,
-                      width: 20,
-                    )
-                  : Image.asset(
-                      'icons/uk-flag.png',
-                      height: 20,
-                      width: 20,
-                    ),
-              onPressed: () {
-                if (context.locale.toString() == "tr") {
-                  context.setLocale(Locale("en"));
-                  _isTR = false;
-                  Future.delayed(const Duration(milliseconds: 100), () {
-                    setState(() {});
-                  });
-                } else {
-                  context.setLocale(Locale("tr"));
-                  _isTR = true;
-                  Future.delayed(const Duration(milliseconds: 100), () {
-                    setState(() {});
-                  });
-                }
-              },
-            ),
-            IconButton(
-              icon: Icon(
-                Icons.brightness_6,
-                color: isDark ? Colors.white : Colors.black,
-              ),
-              onPressed: () {
-                setState(() {
-                  isDark = !isDark;
-                });
-              },
-            ),
-          ],
-        ),
-        body: Center(
-          child: _widgetOptions.elementAt(_selectedIndex),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: <BottomNavigationBarItem>[
-            BottomNavigationBarItem(
-              icon: Icon(Icons.account_circle),
-              label: 'aboutme.navbar'.tr(),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.chat),
-              label: 'blog.navbar'.tr(),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.folder),
-              label: 'projects.navbar'.tr(),
-            ),
-          ],
-          currentIndex: _selectedIndex,
-          selectedItemColor: isDark ? Colors.white : Colors.black,
-          onTap: _onItemTapped,
-          showUnselectedLabels: false,
-        ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.folder),
+            label: 'projects.navbar'.tr(),
+          ),
+        ],
+        activeColor: isDark ? Colors.white : Colors.black,
+        iconSize: 24,
       ),
+      tabBuilder: (context, index) {
+        switch (index) {
+          case 0:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: AboutMePage(),
+              );
+            });
+          case 1:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: BlogPage(),
+              );
+            });
+          case 2:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: ProjectsPage(),
+              );
+            });
+          default:
+            return CupertinoTabView(builder: (context) {
+              return CupertinoPageScaffold(
+                child: AboutMePage(),
+              );
+            });
+        }
+      },
     );
   }
 }

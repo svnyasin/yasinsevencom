@@ -2,11 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:yasinsevencom/constants.dart';
 
-import 'package:yasinsevencom/models/projects.dart';
-import 'package:yasinsevencom/pages/projects/projects_card_mobile.dart';
+import 'package:yasinsevencom/models/blog.dart';
+import 'package:yasinsevencom/pages/blog/blog_content_page.dart';
 
-class ProjectsMobile extends StatelessWidget {
-  const ProjectsMobile({Key? key}) : super(key: key);
+import 'blog_card_desktop.dart';
+
+class BlogDesktop extends StatelessWidget {
+  const BlogDesktop({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -20,8 +22,8 @@ class ProjectsMobile extends StatelessWidget {
                 height: 30,
               ),
               Text(
-                "Projelerim",
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                "Blog",
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               Padding(
                 padding: const EdgeInsets.all(20.0),
@@ -29,8 +31,18 @@ class ProjectsMobile extends StatelessWidget {
                   spacing: kDefaultPadding,
                   runSpacing: kDefaultPadding * 2,
                   children: List.generate(
-                    projects.length,
-                    (index) => ProjectsCardMobile(
+                    blogContents.length,
+                    (index) => BlogCardDesktop(
+                      press: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => BlogContentPage(
+                              index: index,
+                            ),
+                          ),
+                        );
+                      },
                       index: index,
                     ),
                   ),
