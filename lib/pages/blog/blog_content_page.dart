@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_builder/responsive_builder.dart';
 import 'package:yasinsevencom/main.dart';
 import 'package:yasinsevencom/models/blog.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:yasinsevencom/pages/blog/blog.dart';
+import 'package:yasinsevencom/pages/blog/blog_content_desktop.dart';
+import 'package:yasinsevencom/pages/blog/blog_content_mobile.dart';
 
 class BlogContentPage extends StatefulWidget {
   const BlogContentPage({
@@ -80,8 +83,13 @@ class _BlogContentPageState extends State<BlogContentPage> {
           ),
         ],
       ),
-      body: Center(
-        child: Text(blogContents[widget.index!].content!),
+      body: ScreenTypeLayout(
+        mobile: BlogContentMobile(
+          index: widget.index,
+        ),
+        desktop: BlogContentDesktop(
+          index: widget.index,
+        ),
       ),
     );
   }
