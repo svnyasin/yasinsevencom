@@ -1,0 +1,15 @@
+{
+    "aboutme": {
+        "navbar": "Hakkımda",        
+        "head-main": "Selam! Ben Yasin Seven",
+        "main": "Kendimi bildim bileli bilgisayarlar ve elektronik aletlere hep bir hayranlık duyar arka planda neler olduğunu ve nasıl çalıştıklarını merak ederim. Bu nedenle kariyerimi bilişim dünyasında ilerletmeye karar verdim. Siber güvenlik, yazılım ile ilgileniyor ve flutter ile mobil uygulamalar geliştiriyorum."
+    },
+    "blog": {
+        "navbar": "Blog",
+        "main": "Blog sayfası yapım aşamasında.."
+    },
+    "projects": {
+        "navbar": "Projelerim",
+        "main": "Projelerim sayfası yapım aşamasında.."
+    }
+}
