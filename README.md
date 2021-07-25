@@ -5,10 +5,10 @@ Flutter personal website project.
 Demo:
 https://svnyasin.github.io/yasinsevencom/build/web/index.html
 
+![alt text](https://i.hizliresim.com/37ch1uo.png)
 
-[url=https://www.hizliresim.com/37ch1uo][img]https://i.hizliresim.com/37ch1uo.png[/img][/url]
+![alt text](https://i.hizliresim.com/liuaszf.png)
 
-[url=https://www.hizliresim.com/liuaszf][img]https://i.hizliresim.com/liuaszf.png[/img][/url]
 ## Getting Started
 
 This project is a starting point for a Flutter application.
