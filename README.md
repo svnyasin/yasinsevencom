@@ -5,6 +5,9 @@ Flutter personal website project.
 Demo:
 https://svnyasin.github.io/yasinsevencom/build/web/index.html
 
+
+![alt text](https://prnt.sc/1fsywzx)
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
